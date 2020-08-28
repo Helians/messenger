@@ -1,38 +1,132 @@
 .App {
-  text-align: center;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  background: #f1f2f5;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.App__main{
+  max-width: 50em;
+  width: 50em;
+  margin: 0 auto;
+  background-size: cover;
+  box-shadow: 0 12px 28px 0 rgba(0,0,0,0.2),0 2px 4px 0 rgba(0,0,0,0.1);
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  flex-grow: 1;
+}
+
+.App__user__avatar {
+  border-radius:100%;
+  height: 2em;
+  width: 2em;
+  border:1px solid #fff ;
+  margin-right: 8px;
+}
+
+.App__main__header {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding:0 1.5em;
+  height: 3em;
+  flex-shrink: 0;
+  width: 100%;
+  font-size: 18px;
+  font-weight: 600;
+  text-transform: capitalize;
+  background: #0084ff;
+  color: #fff;
 }
 
-.App-link {
-  color: #61dafb;
+.App__main__body {
+  flex-grow: 1;
+  overflow: auto;
+  padding: 1.5em 1.5em 0 1.5em;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.App__main__footer {
+  display: flex;
+  align-items: center;
+  height: 3.5em;
+  flex-shrink: 0;
+  width: 100%;
+  
+}
+
+.App__main__footer__form {
+  height: inherit;
+  width: inherit;
+  margin: 0 1em;
+  position: relative;
+}
+
+.App__footer__input {
+  height: 100%;
+  width: 100%;
+  box-sizing: border-box;
+  padding: 0 8em 0 1em;
+  border-radius: 12px 12px 0 0;
+  border:1px solid rgba(0,0,0,0.1);
+  font-size: 16px;
+}
+
+@media screen and (max-width: 800px) {
+  .App__main__footer__form {
+    margin: 0;
   }
-  to {
-    transform: rotate(360deg);
+
+  .App__footer__input {
+    border-radius: 0;
+    border-width:1px 0 0 0;
+  }
+}
+
+.App__footer__input:focus {
+  border:1px solid rgba(0,0,0,0.2);
+  outline: none;
+}
+
+.App__footer__send__button {
+  position: absolute;
+  right: 0.35em;
+  bottom: 0.35em;
+  text-transform: capitalize;
+  font-size: 16px;
+  background: #0084ff;
+  padding: 0.8em 1.5em;
+  color: #fff;
+  box-shadow: none;
+  border: none;
+  border-radius: 4px 8px 4px 4px;
+  font-weight: 600;
+}
+
+@media screen and (max-width: 800px) {
+
+  .App__main__header {
+    padding:0 0.8em;
+  }
+
+  .App__main__footer__form {
+    margin: 0;
+  }
+
+  .App__footer__input {
+    border-radius: 0;
+    border-width:1px 0 0 0;
+  }
+
+  .App__footer__input:focus {
+    border-width:1px 0 0 0;
+  }
+
+  .App__main__body {
+    padding: 1.5em 0.8em 0 0.8em;
   }
 }
